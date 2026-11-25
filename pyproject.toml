@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtl-rolling"
+version = "0.1.0"
+description = "Entanglement Rolling on generalized tree-like graph states, with noise analysis in the noisy stabilizer formalism."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Francesco Mazza" }]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26",
+    "networkx>=3.2",
+    "noisy_graph_states @ git+https://github.com/jwallnoefer/noisy_graph_states.git@ef4a174611b4e695e327bf369234383a225a2671",
+]
+
+[project.optional-dependencies]
+experiments = ["matplotlib>=3.8", "stim>=1.16"]
+test = ["pytest>=8", "stim>=1.16"]
+dev = ["gtl-rolling[experiments,test]", "ruff==0.17.6"]
+
+[project.urls]
+Repository = "https://github.com/framazzaa/gtl-rolling"
+Issues = "https://github.com/framazzaa/gtl-rolling/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "D"]
+ignore = ["D105"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

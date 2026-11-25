@@ -1,0 +1,43 @@
+{
+  "title": "gtl-rolling: Entanglement Rolling on generalized tree-like graph states",
+  "upload_type": "software",
+  "description": "<p>Python library to build generalized tree-like (GTL) graph states, choose the support vertices of Entanglement Rolling, instantiate Bell pairs or larger star (GHZ) states through the two-stage resolution, and compute their fidelity under depolarizing noise and memory dephasing, in closed form and with the noisy stabilizer formalism. It includes the scripts that reproduce the numerical results of the related article.</p>",
+  "creators": [
+    {
+      "name": "Mazza, Francesco",
+      "affiliation": "University of Naples Federico II"
+    },
+    {
+      "name": "Pellitteri, Claudio",
+      "affiliation": "University of Naples Federico II"
+    },
+    {
+      "name": "Cacciapuoti, Angela Sara",
+      "affiliation": "University of Naples Federico II"
+    },
+    {
+      "name": "Caleffi, Marcello",
+      "affiliation": "University of Naples Federico II"
+    }
+  ],
+  "keywords": [
+    "quantum networks",
+    "graph states",
+    "multipartite entanglement",
+    "Entanglement Rolling",
+    "noisy stabilizer formalism"
+  ],
+  "license": "MIT",
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101169850"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2605.15029",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}
